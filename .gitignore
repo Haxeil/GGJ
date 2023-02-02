@@ -1,0 +1,17 @@
+# Platform-specific
+**/.DS_Store
+
+# Editors
+.vscode/
+.vs/
+
+# Blender backups
+**/*.blend1
+
+# Godot
+.import/
+
+# Mono
+.mono
+mono_crash*
+.mono/metadata/ide_messaging_meta.txt
