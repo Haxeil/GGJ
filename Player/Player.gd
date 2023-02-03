@@ -3,8 +3,8 @@ extends KinematicBody
 
 var speed = 20
 var velocity = Vector3.ZERO
-var gravity = 15
-var rotation_speed = PI / 5
+var gravity = 1
+var rotation_speed = (speed / 15) * (PI / 10)
 var facing_direction = Vector3(1, 0, 0)
 var rotation_drag = 0.55
 
