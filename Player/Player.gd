@@ -6,6 +6,7 @@ var velocity = Vector3.ZERO
 var gravity = 15
 var rotation_speed = PI / 5
 var facing_direction = Vector3(1, 0, 0)
+var rotation_drag = 0.55
 
 func _process(delta):
 	handle_input(delta)
@@ -15,25 +16,25 @@ func _physics_process(delta):
 	move()
 	move_and_slide(velocity, Vector3.UP)
 
+
 func apply_gravity():
-	if is_on_floor():
+	if $FloorDetection.is_colliding():
 		velocity.y = 0
 	else:
 		velocity.y -= gravity
 
 func handle_input(dt):
 	if Input.is_action_pressed("right"):
-		global_rotation.y -= rotation_speed * dt
-	if Input.is_action_pressed("left"):
-		global_rotation.y += rotation_speed * dt
-	
+		global_rotation.y -= lerp(0, rotation_speed * dt, rotation_drag)
+	elif Input.is_action_pressed("left"):
+		global_rotation.y += lerp(0, rotation_speed * dt, rotation_drag)
 
 func move():
 	# no need for normalizing the Vector since cos and sin will give
 	# values -1 < x < 1
 	var direction = Vector3(cos(global_rotation.y), 0, -sin(global_rotation.y))
 	
-	velocity = direction * speed
+	velocity = Vector3(direction.x * speed, velocity.y, direction.z * speed)
 
 
 
