@@ -1,7 +1,7 @@
 extends KinematicBody
 
 
-var speed = 100
+var speed = 20
 var velocity = Vector3.ZERO
 var gravity = 1
 var rotation_speed = (PI / 5 ) * (speed / 20)
@@ -43,3 +43,7 @@ func move():
 
 
 
+
+
+func _on_IncreaseSpeed_timeout():
+	speed += 2

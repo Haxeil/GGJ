@@ -24,3 +24,9 @@ shape = SubResource( 2 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -0.984504, 0 )
 enabled = true
 cast_to = Vector3( 0, -0.2, 0 )
+
+[node name="IncreaseSpeed" type="Timer" parent="."]
+wait_time = 0.1
+autostart = true
+
+[connection signal="timeout" from="IncreaseSpeed" to="." method="_on_IncreaseSpeed_timeout"]
