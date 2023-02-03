@@ -43,7 +43,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -6.84949, 0 )
 transform = Transform( -4.04265e-08, 0.380328, -0.924852, 1.66247e-08, 0.924852, 0.380328, 1, -1.77636e-15, -4.37114e-08, -7.97474, 5.26902, 0 )
 
 [node name="MeshInstance" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -10, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 409, -10, 0 )
 mesh = SubResource( 1 )
 material/0 = SubResource( 2 )
 
@@ -53,7 +53,7 @@ material/0 = SubResource( 2 )
 shape = SubResource( 3 )
 
 [node name="MultiMeshInstance" type="MultiMeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -10.9956, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 409, -10.9956, 0 )
 multimesh = SubResource( 5 )
 
 [node name="MeshInstance2" type="MeshInstance" parent="."]
