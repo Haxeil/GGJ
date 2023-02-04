@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Player/asset_char_014/char_head.PNG" type="Texture" id=1]
 [ext_resource path="res://Player/asset_char_014/char_shin_R.PNG" type="Texture" id=2]
@@ -15,25 +15,22 @@
 [ext_resource path="res://Player/asset_char_014/char_arm_R.PNG" type="Texture" id=13]
 [ext_resource path="res://Player/asset_char_014/char_hand_R.PNG" type="Texture" id=14]
 
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 35, 33 )
-
-[node name="player" type="KinematicBody2D"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource( 1 )
+[node name="Character" type="Node2D"]
+scale = Vector2( 0.1, 0.1 )
 
 [node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 1, 1 )
 texture = ExtResource( 5 )
+
+[node name="CharShinR" type="Sprite" parent="."]
+position = Vector2( -50, 120 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 2 )
 
 [node name="CharShinL" type="Sprite" parent="."]
 position = Vector2( 48, 112 )
 z_index = 1
 texture = ExtResource( 7 )
-
-[node name="CharShinR" type="Sprite" parent="."]
-position = Vector2( -91, 151 )
-texture = ExtResource( 2 )
 
 [node name="CharArmL" type="Sprite" parent="."]
 position = Vector2( 33, -58 )

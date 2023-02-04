@@ -9,12 +9,15 @@ onready var ray_vector = ground_ray.cast_to
 export var jump_power = 300
 var was_on_ground = false
 var on_ground = false
-
 var jump_vector = Vector2.UP
+var gravity_vector = Vector2.DOWN
+
+var rotation_adjustment_speed = PI / 6 # 1/12 rotation 
 
 func _physics_process(dt):
 	apply_gravity(dt);
 	jump()
+#	set_veloity_length()
 	move()
 
 func _process(delta):
@@ -25,15 +28,17 @@ func apply_gravity(dt):
 		if rotation == 0:
 			velocity.y = 0
 	else:
-		velocity.y += gravity;
-
+		velocity -= gravity * gravity_vector;
+		adjust_rotation_when_flying(dt)
 
 func move():
 	if on_ground:
 		velocity = Vector2(cos(rotation), sin(rotation)) * speed
 		# perpendicular Counter clockwise
 		jump_vector = Vector2(-velocity.normalized().y, velocity.normalized().x)
-	
+		# perpendicular Clockwise
+		gravity_vector = Vector2(velocity.normalized().y, -velocity.normalized().x)
+		
 	was_on_ground = on_ground
 	move_and_slide(velocity, ray_vector)
 	on_ground = ground_ray.is_colliding()
@@ -52,7 +57,13 @@ func jump():
 		$Ray.enabled = false
 		$JumpTime.start()
 		on_ground = false
-		velocity += jump_vector * -jump_power 
+		velocity += jump_vector * -jump_power
+
+
+func set_veloity_length():
+	if velocity.length() < speed:
+		velocity = velocity.normalized() * speed
+
 
 
 
@@ -62,7 +73,11 @@ func _on_JumpTime_timeout():
 	
 	
 
-
+func adjust_rotation_when_flying(dt):
+	if rotation < velocity.angle_to(gravity_vector):
+		rotation -= rotation_adjustment_speed * dt
+	elif rotation > velocity.angle_to(gravity_vector):
+		rotation += rotation_adjustment_speed * dt
 
 func _on_Area2D_area_entered(area):
 	if area.is_in_group("Coin"):
