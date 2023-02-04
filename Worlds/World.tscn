@@ -8,10 +8,11 @@ extents = Vector2( 165, 10 )
 [node name="World" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 30, 79 )
+position = Vector2( 27, 188 )
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2( -30, -18 )
+current = true
 
 [node name="KinematicBody2D" type="StaticBody2D" parent="."]
 position = Vector2( -2, 68 )
@@ -30,9 +31,49 @@ position = Vector2( 147, 118 )
 shape = SubResource( 1 )
 
 [node name="KinematicBody2D3" type="StaticBody2D" parent="."]
-position = Vector2( 538, 289 )
-rotation = -0.0420246
+position = Vector2( 591, 349 )
+rotation = 0.523454
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D3"]
+position = Vector2( 147, 118 )
+shape = SubResource( 1 )
+
+[node name="KinematicBody2D4" type="StaticBody2D" parent="."]
+position = Vector2( 871, 523 )
+rotation = 0.523454
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D4"]
+position = Vector2( 147, 118 )
+shape = SubResource( 1 )
+
+[node name="KinematicBody2D5" type="StaticBody2D" parent="."]
+position = Vector2( 1136, 718 )
+rotation = 0.523454
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D5"]
+position = Vector2( 147, 118 )
+shape = SubResource( 1 )
+
+[node name="KinematicBody2D6" type="StaticBody2D" parent="."]
+position = Vector2( 1308, 869 )
+rotation = -0.047561
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D6"]
+position = Vector2( 147, 118 )
+shape = SubResource( 1 )
+
+[node name="KinematicBody2D7" type="StaticBody2D" parent="."]
+position = Vector2( 1609, 852 )
+rotation = -0.213659
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D7"]
+position = Vector2( 147, 118 )
+shape = SubResource( 1 )
+
+[node name="KinematicBody2D8" type="StaticBody2D" parent="."]
+position = Vector2( 1883, 799 )
+rotation = -0.559946
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D8"]
 position = Vector2( 147, 118 )
 shape = SubResource( 1 )
