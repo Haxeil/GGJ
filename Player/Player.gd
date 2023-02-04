@@ -4,7 +4,7 @@ extends KinematicBody2D
 var gravity = 12
 var speed = 300
 var velocity = Vector2.ZERO
-onready var ground_ray = $Ray
+onready var ground_ray = $GroundDetection/Ray00
 onready var ray_vector = ground_ray.cast_to
 export var jump_power = 300
 var was_on_ground = false
@@ -41,10 +41,10 @@ func move():
 		
 	was_on_ground = on_ground
 	move_and_slide(velocity, ray_vector)
-	on_ground = ground_ray.is_colliding()
+	on_ground = check_ground_collision()
 
 func adjust_movement():
-	if ground_ray.is_colliding():
+	if on_ground:
 		var normal_vec = ground_ray.get_collision_normal()
 		var adjustment_angle = -normal_vec.angle_to(-ray_vector)
 		if abs(adjustment_angle) >= deg2rad(80): return
@@ -54,24 +54,26 @@ func adjust_movement():
 
 func jump():
 	if Input.is_action_just_pressed("jump") and on_ground: 
-		$Ray.enabled = false
+		for ray in $GroundDetection.get_children():
+			ray.enabled = false
 		$JumpTime.start()
 		on_ground = false
 		velocity += jump_vector * -jump_power
 
 
-func set_veloity_length():
-	if velocity.length() < speed:
-		velocity = velocity.normalized() * speed
-
-
-
 
 func _on_JumpTime_timeout():
-	$Ray.enabled = true
+	for ray in $GroundDetection.get_children():
+		ray.enabled = true
+
+
+func check_ground_collision() -> bool:
 	
-	
-	
+	for ray in $GroundDetection.get_children():
+		if ray.is_colliding():
+			return true
+		
+	return false
 
 func adjust_rotation_when_flying(dt):
 	if rotation < velocity.angle_to(gravity_vector):
