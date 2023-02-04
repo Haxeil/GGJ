@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+[node name="StaticBody_Coin" type="Area2D" groups=["Coin"]]
+collision_mask = 0
+monitoring = false
+
+[node name="CollisionShape_Coin" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )

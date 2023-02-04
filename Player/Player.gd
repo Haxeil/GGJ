@@ -1,7 +1,8 @@
 extends KinematicBody2D
 
-export var gravity = 12
-export var speed = 300
+
+var gravity = 12
+var speed = 300
 var velocity = Vector2.ZERO
 onready var ground_ray = $Ray
 onready var ray_vector = ground_ray.cast_to
@@ -57,3 +58,13 @@ func jump():
 
 func _on_JumpTime_timeout():
 	$Ray.enabled = true
+	
+	
+	
+
+
+
+func _on_Area2D_area_entered(area):
+	if area.is_in_group("Coin"):
+		area.queue_free()
+		$"../UI/CoinCount".text = str(int($"../UI/CoinCount".text)+1)
