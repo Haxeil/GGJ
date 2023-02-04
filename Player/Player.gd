@@ -1,30 +1,41 @@
 extends KinematicBody2D
 
-var gravity = 12
-var speed = 180
+export var gravity = 12
+export var speed = 300
 var velocity = Vector2.ZERO
 onready var ground_ray = $Ray
 onready var ray_vector = ground_ray.cast_to
+export var jump_power = 300
+var was_on_ground = false
+var on_ground = false
 
+var jump_vector = Vector2.UP
 
 func _physics_process(dt):
 	apply_gravity(dt);
+	jump()
 	move()
 
 func _process(delta):
 	adjust_movement()
 
 func apply_gravity(dt):
-	if ground_ray.is_colliding():
-		velocity = Vector2(cos(rotation), sin(rotation)) * speed
+	if on_ground:
 		if rotation == 0:
 			velocity.y = 0
 	else:
 		velocity.y += gravity;
 
-func move():
 
+func move():
+	if on_ground:
+		velocity = Vector2(cos(rotation), sin(rotation)) * speed
+		# perpendicular Counter clockwise
+		jump_vector = Vector2(-velocity.normalized().y, velocity.normalized().x)
+	
+	was_on_ground = on_ground
 	move_and_slide(velocity, ray_vector)
+	on_ground = ground_ray.is_colliding()
 
 func adjust_movement():
 	if ground_ray.is_colliding():
@@ -35,7 +46,14 @@ func adjust_movement():
 		tween.tween_property(self, "rotation", adjustment_angle, 0.3)
 
 
+func jump():
+	if Input.is_action_just_pressed("jump") and on_ground: 
+		$Ray.enabled = false
+		$JumpTime.start()
+		on_ground = false
+		velocity += jump_vector * -jump_power 
 
-	
-	
-	
+
+
+func _on_JumpTime_timeout():
+	$Ray.enabled = true
