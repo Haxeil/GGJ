@@ -1,11 +1,10 @@
 extends KinematicBody2D
 
 var gravity = 12
-var speed = 180
+var speed = 300
 var velocity = Vector2.ZERO
 onready var ground_ray = $Ray
 onready var ray_vector = ground_ray.cast_to
-
 
 func _physics_process(dt):
 	apply_gravity(dt);
@@ -35,7 +34,13 @@ func adjust_movement():
 		tween.tween_property(self, "rotation", adjustment_angle, 0.3)
 
 
+	
+	
+	
 
-	
-	
-	
+
+
+func _on_Area2D_area_entered(area):
+	if area.is_in_group("Coin"):
+		area.queue_free()
+		$"../UI/CoinCount".text = str(int($"../UI/CoinCount".text)+1)
