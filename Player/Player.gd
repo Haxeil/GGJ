@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 var gravity = 12
-var speed = 20
+var speed = 40
 var velocity = Vector2.ZERO
 onready var ground_ray = $Ray
 onready var ray_vector = ground_ray.cast_to
