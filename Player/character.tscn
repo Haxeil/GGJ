@@ -19,63 +19,89 @@
 scale = Vector2( 0.1, 0.1 )
 
 [node name="Sprite" type="Sprite" parent="."]
-scale = Vector2( 1, 1 )
+visible = false
 texture = ExtResource( 5 )
-
-[node name="CharShinR" type="Sprite" parent="."]
-position = Vector2( -50, 120 )
-scale = Vector2( 1, 1 )
-texture = ExtResource( 2 )
-
-[node name="CharShinL" type="Sprite" parent="."]
-position = Vector2( 48, 112 )
-z_index = 1
-texture = ExtResource( 7 )
-
-[node name="CharArmL" type="Sprite" parent="."]
-position = Vector2( 33, -58 )
-texture = ExtResource( 11 )
-
-[node name="CharArmR" type="Sprite" parent="."]
-position = Vector2( -33.5, -58.5 )
-texture = ExtResource( 13 )
-
-[node name="CharForearmL" type="Sprite" parent="."]
-position = Vector2( 45, -20.5 )
-texture = ExtResource( 10 )
-
-[node name="CharForearmR" type="Sprite" parent="."]
-position = Vector2( -47.5, -21.5 )
-texture = ExtResource( 9 )
-
-[node name="CharHandL" type="Sprite" parent="."]
-position = Vector2( 53, 5.5 )
-texture = ExtResource( 12 )
-
-[node name="CharHandR" type="Sprite" parent="."]
-position = Vector2( -56.5, 4.5 )
-texture = ExtResource( 14 )
-
-[node name="CharHead" type="Sprite" parent="."]
-position = Vector2( 0, -144 )
-texture = ExtResource( 1 )
 
 [node name="CharHips" type="Sprite" parent="."]
-position = Vector2( -1, 0 )
+position = Vector2( -0.0078764, 0 )
 texture = ExtResource( 5 )
 
-[node name="CharNeck" type="Sprite" parent="."]
-position = Vector2( 0, -96 )
-texture = ExtResource( 6 )
-
-[node name="CharThighL" type="Sprite" parent="."]
-position = Vector2( 24, 40 )
-texture = ExtResource( 8 )
-
-[node name="CharThighR" type="Sprite" parent="."]
-position = Vector2( -24, 40 )
+[node name="CharThighR" type="Sprite" parent="CharHips"]
+position = Vector2( -20.7388, 18.3426 )
+scale = Vector2( 1, 1 )
 texture = ExtResource( 3 )
+offset = Vector2( -3.62494, 24.2587 )
+
+[node name="CharShinR" type="Sprite" parent="CharHips/CharThighR"]
+position = Vector2( -11.0243, 52.3655 )
+scale = Vector2( 1, 1 )
+z_index = 1
+texture = ExtResource( 2 )
+offset = Vector2( -12.6659, 41.6126 )
+
+[node name="CharThighL" type="Sprite" parent="CharHips"]
+position = Vector2( 20.7992, 18.3426 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 8 )
+offset = Vector2( 3.20865, 23.7013 )
+
+[node name="CharShinL" type="Sprite" parent="."]
+position = Vector2( 32.4062, 72.283 )
+scale = Vector2( 1, 1 )
+z_index = 1
+texture = ExtResource( 7 )
+offset = Vector2( 12.0254, 41.1618 )
 
 [node name="CharTorso" type="Sprite" parent="."]
-position = Vector2( 0, -50 )
+position = Vector2( -0.0892258, -20.4987 )
+z_index = -1
 texture = ExtResource( 4 )
+offset = Vector2( 0.0892258, -22.6262 )
+
+[node name="CharArmL" type="Sprite" parent="CharTorso"]
+position = Vector2( 21.3647, -53.6219 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 11 )
+offset = Vector2( 6.89339, 21.695 )
+
+[node name="CharForearmL" type="Sprite" parent="CharTorso/CharArmL"]
+position = Vector2( 14.6831, 45.0745 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 10 )
+offset = Vector2( 5.88259, 14.4921 )
+
+[node name="CharHandL" type="Sprite" parent="CharTorso/CharArmL/CharForearmL"]
+position = Vector2( 13.6651, 30.7177 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 12 )
+offset = Vector2( -1.06107, 9.40283 )
+
+[node name="CharArmR" type="Sprite" parent="CharTorso"]
+position = Vector2( -20.5731, -53.8629 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 13 )
+offset = Vector2( -7.63486, 22.1793 )
+
+[node name="CharForearmR" type="Sprite" parent="CharTorso/CharArmR"]
+position = Vector2( -15.1584, 45.2784 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 9 )
+offset = Vector2( -6.47642, 13.9009 )
+
+[node name="CharHandR" type="Sprite" parent="CharTorso/CharArmR/CharForearmR"]
+position = Vector2( -14.7647, 30.3169 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 14 )
+offset = Vector2( -0.711758, 9.58401 )
+
+[node name="CharNeck" type="Sprite" parent="CharTorso"]
+position = Vector2( 0.0131149, -62.9368 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 6 )
+offset = Vector2( 0.0761127, -4.69011 )
+
+[node name="CharHead" type="Sprite" parent="CharTorso/CharNeck"]
+position = Vector2( 0.0761108, -52.69 )
+scale = Vector2( 1, 1 )
+z_index = 1
+texture = ExtResource( 1 )
