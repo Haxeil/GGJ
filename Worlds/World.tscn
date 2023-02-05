@@ -395,6 +395,9 @@ __meta__ = {
 "_edit_lock_": true
 }
 
+[node name="AnimatedSprite" parent="Player" index="6"]
+frame = 1
+
 [node name="UI" type="CanvasLayer" parent="."]
 
 [node name="CoinLabel" type="Label" parent="UI"]
