@@ -6,7 +6,7 @@ var speed = 300
 var velocity = Vector2.ZERO
 onready var ground_ray = $GroundDetection/Ray00
 onready var ray_vector = ground_ray.cast_to
-var jump_power = speed * 1.5
+var jump_power = speed
 var was_on_ground: bool = false
 var on_ground = false
 var jump_vector = Vector2.UP
@@ -32,7 +32,7 @@ func _process(delta):
 func apply_gravity(dt):
 	if on_ground:
 		animation_sprite.play("Idle")
-		if not $Slide.playing == true:
+		if $Slide.playing == false:
 			$Slide.play()
 		if rotation == 0:
 			velocity.y = 0
@@ -41,7 +41,7 @@ func apply_gravity(dt):
 		if velocity.length() != 0 and velocity.length() > gravity_vector.length() and velocity.length() > -jump_vector.length() / gravity_vector.length():
 			if animation_sprite.animation == "Jump" and animation_sprite.playing == true: return
 			animation_sprite.play("Fall")
-		
+			$Slide.stop()
 		
 		
 		adjust_rotation_when_flying(dt)
@@ -118,4 +118,4 @@ func _on_AnimatedSprite_animation_finished():
 
 func _on_IncreaseSpee_timeout():
 	speed += 4
-	jump_power = speed * 1.5
+	jump_power = speed

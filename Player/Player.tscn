@@ -89,7 +89,6 @@ enabled = true
 cast_to = Vector2( 0, 5 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
-current = true
 zoom = Vector2( 0.5, 0.5 )
 limit_left = 0
 limit_top = 0
@@ -100,7 +99,6 @@ position = Vector2( -5, 12 )
 scale = Vector2( 0.2, 0.2 )
 frames = SubResource( 2 )
 animation = "Idle"
-frame = 1
 playing = true
 
 [node name="IncreaseSpee" type="Timer" parent="."]
@@ -119,6 +117,11 @@ stream = ExtResource( 11 )
 [node name="Hit" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 14 )
 volume_db = 13.0
+
+[node name="Camera2D2" type="Camera2D" parent="."]
+limit_left = 9
+limit_top = 9
+limit_smoothed = true
 
 [connection signal="timeout" from="JumpTime" to="." method="_on_JumpTime_timeout"]
 [connection signal="area_entered" from="DetectionArea" to="." method="_on_Area2D_area_entered"]
