@@ -218,6 +218,70 @@ rotation = 0.303272
 position = Vector2( 2600, 1180 )
 rotation = 0.182038
 
+[node name="Vine32" parent="Vines" instance=ExtResource( 5 )]
+position = Vector2( 1814.62, 1472.53 )
+rotation = 0.338139
+
+[node name="Vine33" parent="Vines" instance=ExtResource( 3 )]
+position = Vector2( 2189.62, 1604.53 )
+rotation = 0.303272
+
+[node name="Vine34" parent="Vines" instance=ExtResource( 4 )]
+position = Vector2( 2536.62, 1710.53 )
+rotation = 0.182038
+
+[node name="Vine35" parent="Vines" instance=ExtResource( 5 )]
+position = Vector2( 2829.62, 1802.53 )
+rotation = 0.338139
+
+[node name="Vine36" parent="Vines" instance=ExtResource( 3 )]
+position = Vector2( 3211.62, 1948.53 )
+rotation = 0.303272
+
+[node name="Vine37" parent="Vines" instance=ExtResource( 4 )]
+position = Vector2( 3558.62, 2054.53 )
+rotation = 0.182038
+
+[node name="Vine38" parent="Vines" instance=ExtResource( 5 )]
+position = Vector2( 657.326, 433.367 )
+rotation = 0.338139
+
+[node name="Vine39" parent="Vines" instance=ExtResource( 3 )]
+position = Vector2( 1032.33, 565.367 )
+rotation = 0.303272
+
+[node name="Vine42" parent="Vines" instance=ExtResource( 3 )]
+position = Vector2( 2054.33, 909.367 )
+rotation = 0.303272
+
+[node name="Vine43" parent="Vines" instance=ExtResource( 4 )]
+position = Vector2( 2401.33, 1015.37 )
+rotation = 0.182038
+
+[node name="Vine44" parent="Vines" instance=ExtResource( 5 )]
+position = Vector2( 1102.21, 477.984 )
+rotation = 0.338139
+
+[node name="Vine45" parent="Vines" instance=ExtResource( 3 )]
+position = Vector2( 1477.21, 609.984 )
+rotation = 0.303272
+
+[node name="Vine46" parent="Vines" instance=ExtResource( 4 )]
+position = Vector2( 1824.21, 715.984 )
+rotation = 0.182038
+
+[node name="Vine47" parent="Vines" instance=ExtResource( 5 )]
+position = Vector2( 2117.21, 807.984 )
+rotation = 0.338139
+
+[node name="Vine48" parent="Vines" instance=ExtResource( 3 )]
+position = Vector2( 2499.21, 953.984 )
+rotation = 0.303272
+
+[node name="Vine49" parent="Vines" instance=ExtResource( 4 )]
+position = Vector2( 2846.2, 1059.98 )
+rotation = 0.182038
+
 [node name="Vine9" parent="Vines" instance=ExtResource( 5 )]
 position = Vector2( 2893, 1272 )
 rotation = 0.338139
@@ -313,6 +377,14 @@ rotation = -0.317221
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 53, 298 )
 
+[node name="Sprite" parent="Player/ParallaxBackground/ParallaxLayer" index="0"]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="AnimatedSprite" parent="Player" index="6"]
+frame = 1
+
 [node name="UI" type="CanvasLayer" parent="."]
 
 [node name="CoinLabel" type="Label" parent="UI"]
@@ -332,27 +404,27 @@ text = "0"
 [node name="Coins" type="Node" parent="."]
 
 [node name="Coin" parent="Coins" instance=ExtResource( 2 )]
-position = Vector2( 196, 255 )
+position = Vector2( 182.515, 359.132 )
 collision_mask = 1
 
 [node name="Coin2" parent="Coins" instance=ExtResource( 2 )]
-position = Vector2( 350, 282 )
+position = Vector2( 304.302, 398.868 )
 collision_mask = 1
 
 [node name="Coin3" parent="Coins" instance=ExtResource( 2 )]
-position = Vector2( 493, 309 )
+position = Vector2( 480.264, 455.834 )
 collision_mask = 1
 
 [node name="Coin4" parent="Coins" instance=ExtResource( 2 )]
-position = Vector2( 580, 315 )
+position = Vector2( 523.813, 350.21 )
 collision_mask = 1
 
 [node name="Coin5" parent="Coins" instance=ExtResource( 2 )]
-position = Vector2( 669, 386 )
+position = Vector2( 653.268, 401.732 )
 collision_mask = 1
 
 [node name="Coin6" parent="Coins" instance=ExtResource( 2 )]
-position = Vector2( 769, 508 )
+position = Vector2( 770.498, 441.325 )
 collision_mask = 1
 
 [node name="Coin7" parent="Coins" instance=ExtResource( 2 )]
