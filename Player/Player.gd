@@ -6,7 +6,7 @@ var speed = 300
 var velocity = Vector2.ZERO
 onready var ground_ray = $GroundDetection/Ray00
 onready var ray_vector = ground_ray.cast_to
-var jump_power = speed * 1.2
+var jump_power = speed * 1.5
 var was_on_ground: bool = false
 var on_ground = false
 var jump_vector = Vector2.UP
@@ -32,6 +32,8 @@ func _process(delta):
 func apply_gravity(dt):
 	if on_ground:
 		animation_sprite.play("Idle")
+		if not $Slide.playing == true:
+			$Slide.play()
 		if rotation == 0:
 			velocity.y = 0
 	else:
@@ -51,10 +53,14 @@ func move():
 		jump_vector = Vector2(-velocity.normalized().y, velocity.normalized().x)
 		# perpendicular Clockwise
 		gravity_vector = Vector2(velocity.normalized().y, -velocity.normalized().x)
-		
+	
 	was_on_ground = on_ground
 	move_and_slide(velocity, ray_vector)
 	on_ground = check_ground_collision()
+	
+	if was_on_ground == false and on_ground:
+		if not $Hit.playing == true:
+			$Hit.play()
 
 func adjust_movement():
 	if on_ground:
@@ -68,6 +74,9 @@ func adjust_movement():
 func jump():
 	if Input.is_action_just_pressed("jump") and on_ground: 
 		animation_sprite.play("Jump")
+		$Slide.stop()
+		$Jump.play()
+		$Jump1.play()
 		for ray in $GroundDetection.get_children():
 			ray.enabled = false
 		$JumpTime.start()
@@ -90,10 +99,10 @@ func check_ground_collision() -> bool:
 	return false
 
 func adjust_rotation_when_flying(dt):
-	if rotation < velocity.angle_to(gravity_vector):
-		rotation -= rotation_adjustment_speed * dt
-	elif rotation > velocity.angle_to(gravity_vector):
+	if rotation < 0:
 		rotation += rotation_adjustment_speed * dt
+	elif rotation > 0:
+		rotation -= rotation_adjustment_speed * dt
 
 func _on_Area2D_area_entered(area):
 	if area.is_in_group("Coin"):
@@ -104,7 +113,9 @@ func _on_Area2D_area_entered(area):
 func _on_AnimatedSprite_animation_finished():
 	if animation_sprite.animation == "Jump":
 		animation_sprite.play("Fall")
+		#reset speed
+		speed = 300
 
 func _on_IncreaseSpee_timeout():
-	speed += 2
-	pass
+	speed += 4
+	jump_power = speed * 1.5
