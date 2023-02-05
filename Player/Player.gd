@@ -12,7 +12,6 @@ var on_ground = false
 var jump_vector = Vector2.UP
 var gravity_vector = Vector2.DOWN
 onready var animation_sprite: AnimatedSprite = $AnimatedSprite
-onready var animation_coin: AnimatedSprite = $CoinAnim
 
 var rotation_adjustment_speed = PI / 12 # 1/12 rotation 
 
@@ -107,10 +106,10 @@ func adjust_rotation_when_flying(dt):
 
 func _on_Area2D_area_entered(area):
 	if area.is_in_group("Coin"):
-		animation_coin.play("none")
-		area.queue_free()
+		area.get_node("CoinAnim").play("none")
+		area.get_node("Sprite").queue_free()
 		$"../UI/CoinCount".text = str(int($"../UI/CoinCount".text)+1)
-		animation_coin.play("default")
+		area.get_node("CoinAnim").play("default")
 		
 
 func _on_AnimatedSprite_animation_finished():
