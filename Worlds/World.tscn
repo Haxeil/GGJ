@@ -243,32 +243,45 @@ position = Vector2( 3558.62, 2054.53 )
 rotation = 0.182038
 
 [node name="Vine38" parent="Vines" instance=ExtResource( 5 )]
-position = Vector2( 657.326, 433.367 )
+position = Vector2( 729.142, 450.462 )
 rotation = 0.338139
 
+[node name="Vine40" parent="Vines" instance=ExtResource( 5 )]
+position = Vector2( 497.506, 384.796 )
+scale = Vector2( 0.352285, 0.65624 )
+
 [node name="Vine39" parent="Vines" instance=ExtResource( 3 )]
-position = Vector2( 1032.33, 565.367 )
-rotation = 0.303272
+position = Vector2( 1042.23, 558.64 )
+rotation = 0.261799
+scale = Vector2( 0.696943, 1 )
 
 [node name="Vine42" parent="Vines" instance=ExtResource( 3 )]
 position = Vector2( 2054.33, 909.367 )
 rotation = 0.303272
+scale = Vector2( 1, 1.02156 )
 
 [node name="Vine43" parent="Vines" instance=ExtResource( 4 )]
 position = Vector2( 2401.33, 1015.37 )
 rotation = 0.182038
 
 [node name="Vine44" parent="Vines" instance=ExtResource( 5 )]
-position = Vector2( 1102.21, 477.984 )
+position = Vector2( 1174.02, 485.544 )
 rotation = 0.338139
 
 [node name="Vine45" parent="Vines" instance=ExtResource( 3 )]
-position = Vector2( 1477.21, 609.984 )
-rotation = 0.303272
+position = Vector2( 1398.22, 585.796 )
+rotation = 0.523598
+scale = Vector2( 0.317532, 0.663926 )
+
+[node name="Vine50" parent="Vines" instance=ExtResource( 3 )]
+position = Vector2( 1482.35, 650.879 )
+rotation = 0.785397
+scale = Vector2( 0.156671, 0.355957 )
 
 [node name="Vine46" parent="Vines" instance=ExtResource( 4 )]
 position = Vector2( 1824.21, 715.984 )
 rotation = 0.182038
+scale = Vector2( 1, 0.59839 )
 
 [node name="Vine47" parent="Vines" instance=ExtResource( 5 )]
 position = Vector2( 2117.21, 807.984 )
@@ -382,12 +395,6 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="Camera2D2" parent="Player" index="12"]
-current = true
-limit_left = 0
-limit_top = 0
-smoothing_enabled = true
-
 [node name="UI" type="CanvasLayer" parent="."]
 
 [node name="CoinLabel" type="Label" parent="UI"]
@@ -419,15 +426,15 @@ position = Vector2( 480.264, 455.834 )
 collision_mask = 1
 
 [node name="Coin4" parent="Coins" instance=ExtResource( 2 )]
-position = Vector2( 523.813, 350.21 )
+position = Vector2( 596.889, 356.51 )
 collision_mask = 1
 
 [node name="Coin5" parent="Coins" instance=ExtResource( 2 )]
-position = Vector2( 653.268, 401.732 )
+position = Vector2( 726.343, 408.032 )
 collision_mask = 1
 
 [node name="Coin6" parent="Coins" instance=ExtResource( 2 )]
-position = Vector2( 770.498, 441.325 )
+position = Vector2( 843.574, 447.625 )
 collision_mask = 1
 
 [node name="Coin7" parent="Coins" instance=ExtResource( 2 )]
