@@ -24,15 +24,15 @@
 z_index = -1
 
 [node name="BGtree1" type="Sprite" parent="BGtree"]
-position = Vector2( 821.942, 509.541 )
+position = Vector2( 753.942, 563.541 )
 rotation = 0.388059
-scale = Vector2( 0.6, 0.634455 )
+scale = Vector2( 0.395129, 0.330377 )
 texture = ExtResource( 6 )
 
 [node name="BGtree2" type="Sprite" parent="BGtree"]
-position = Vector2( 742.41, 365.502 )
+position = Vector2( 658.41, 467.502 )
 rotation = 0.289338
-scale = Vector2( 0.788788, 0.998249 )
+scale = Vector2( 0.536798, 0.543195 )
 texture = ExtResource( 8 )
 
 [node name="BGtree3" type="Sprite" parent="BGtree"]
@@ -46,7 +46,7 @@ scale = Vector2( 0.856714, 1.13284 )
 texture = ExtResource( 7 )
 
 [node name="BGtree18" type="Sprite" parent="BGtree"]
-position = Vector2( 1505.01, 601.587 )
+position = Vector2( 3461.01, 861.587 )
 scale = Vector2( 0.856714, 1.13284 )
 texture = ExtResource( 7 )
 
@@ -79,9 +79,9 @@ scale = Vector2( 0.6, 0.7 )
 texture = ExtResource( 7 )
 
 [node name="BGtree8" type="Sprite" parent="BGtree"]
-position = Vector2( 3738.81, 1350.39 )
+position = Vector2( 3792.81, 1316.39 )
 rotation = 0.447393
-scale = Vector2( 0.6, 0.7 )
+scale = Vector2( 0.743967, 0.91224 )
 texture = ExtResource( 9 )
 
 [node name="BGtree9" type="Sprite" parent="BGtree"]
@@ -91,43 +91,43 @@ scale = Vector2( 0.6, 0.634455 )
 texture = ExtResource( 6 )
 
 [node name="BGtree10" type="Sprite" parent="BGtree"]
-position = Vector2( 4544.81, 1752.39 )
+position = Vector2( 4968.81, 1768.39 )
 rotation = 0.289338
 scale = Vector2( 0.6, 0.7 )
 texture = ExtResource( 8 )
 
 [node name="BGtree11" type="Sprite" parent="BGtree"]
-position = Vector2( 5038.81, 1932.39 )
+position = Vector2( 5142.81, 1768.39 )
 rotation = 0.289338
-scale = Vector2( 0.6, 0.7 )
+scale = Vector2( 0.770549, 0.807679 )
 texture = ExtResource( 7 )
 
 [node name="BGtree12" type="Sprite" parent="BGtree"]
-position = Vector2( 5516.81, 2060.39 )
+position = Vector2( 5624.81, 1980.39 )
 rotation = 0.447393
 scale = Vector2( 0.6, 0.7 )
 texture = ExtResource( 9 )
 
 [node name="BGtree13" type="Sprite" parent="BGtree"]
-position = Vector2( 6006.02, 2241.34 )
+position = Vector2( 5798.02, 2005.34 )
 rotation = 0.388059
-scale = Vector2( 0.6, 0.634455 )
+scale = Vector2( 0.798634, 0.827109 )
 texture = ExtResource( 6 )
 
 [node name="BGtree14" type="Sprite" parent="BGtree"]
-position = Vector2( 6568.81, 2329.39 )
+position = Vector2( 5688.81, 2049.39 )
 rotation = 0.289338
-scale = Vector2( 0.6, 0.7 )
+scale = Vector2( 0.486808, 0.518285 )
 texture = ExtResource( 8 )
 
 [node name="BGtree15" type="Sprite" parent="BGtree"]
-position = Vector2( 7062.81, 2509.39 )
+position = Vector2( 7066.81, 2449.39 )
 rotation = 0.289338
 scale = Vector2( 0.6, 0.7 )
 texture = ExtResource( 7 )
 
 [node name="BGtree16" type="Sprite" parent="BGtree"]
-position = Vector2( 7540.81, 2637.39 )
+position = Vector2( 7092.81, 2461.39 )
 rotation = 0.447393
 scale = Vector2( 0.6, 0.7 )
 texture = ExtResource( 9 )
@@ -153,8 +153,14 @@ scale = Vector2( 0.3, 0.646469 )
 texture = ExtResource( 14 )
 
 [node name="GianTtree5" type="Sprite" parent="GIANTree"]
-position = Vector2( 4206, 1110.75 )
+position = Vector2( 4344.82, 1425.77 )
 rotation = 0.478506
+scale = Vector2( 0.470062, 1.16739 )
+texture = ExtResource( 14 )
+
+[node name="GianTtree9" type="Sprite" parent="GIANTree"]
+position = Vector2( 11613.3, 3718.56 )
+rotation = 0.261799
 scale = Vector2( 0.470062, 1.16739 )
 texture = ExtResource( 14 )
 
@@ -185,31 +191,31 @@ texture = ExtResource( 16 )
 z_index = 2
 
 [node name="FGtree1" type="Sprite" parent="FGtree"]
-position = Vector2( 376.318, 705.483 )
+position = Vector2( 444.318, 245.483 )
 rotation = 0.44721
 scale = Vector2( 0.6, 0.7 )
 texture = ExtResource( 12 )
 
 [node name="FGtree2" type="Sprite" parent="FGtree"]
-position = Vector2( 964.331, 964.267 )
+position = Vector2( 1364.33, 1112.27 )
 rotation = 0.304937
 scale = Vector2( 0.6, 0.7 )
 texture = ExtResource( 10 )
 
 [node name="FGtree3" type="Sprite" parent="FGtree"]
-position = Vector2( 1910.3, 1274.14 )
+position = Vector2( 2290.3, 1874.14 )
 rotation = 0.204716
 scale = Vector2( 0.6, 0.7 )
 texture = ExtResource( 11 )
 
 [node name="FGtree4" type="Sprite" parent="FGtree"]
-position = Vector2( 2322.96, 1318.08 )
+position = Vector2( 2554.96, 1962.08 )
 rotation = 0.380541
 scale = Vector2( 0.6, 0.7 )
 texture = ExtResource( 13 )
 
 [node name="FGtree5" type="Sprite" parent="FGtree"]
-position = Vector2( 2948.18, 1549.69 )
+position = Vector2( 2828.18, 2081.69 )
 rotation = 0.44721
 scale = Vector2( 0.6, 0.7 )
 texture = ExtResource( 12 )
@@ -555,6 +561,14 @@ rotation = 0.261799
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 53, 298 )
 
+[node name="Sprite" parent="Player/ParallaxBackground/ParallaxLayer" index="0"]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="AnimatedSprite" parent="Player" index="6"]
+frame = 1
+
 [node name="UI" type="CanvasLayer" parent="."]
 
 [node name="CoinLabel" type="Label" parent="UI"]
@@ -657,6 +671,42 @@ collision_mask = 1
 position = Vector2( 2744.57, 797.548 )
 collision_mask = 1
 
+[node name="Coin22" parent="Coins" instance=ExtResource( 2 )]
+position = Vector2( 3150.82, 824.275 )
+collision_mask = 1
+
+[node name="Coin23" parent="Coins" instance=ExtResource( 2 )]
+position = Vector2( 3382.45, 1039.87 )
+collision_mask = 1
+
+[node name="Coin24" parent="Coins" instance=ExtResource( 2 )]
+position = Vector2( 3329, 904.456 )
+collision_mask = 1
+
+[node name="Coin25" parent="Coins" instance=ExtResource( 2 )]
+position = Vector2( 2947.69, 815.366 )
+collision_mask = 1
+
+[node name="Coin26" parent="Coins" instance=ExtResource( 2 )]
+position = Vector2( 3614.08, 1125.4 )
+collision_mask = 1
+
+[node name="Coin27" parent="Coins" instance=ExtResource( 2 )]
+position = Vector2( 3893.83, 1063.04 )
+collision_mask = 1
+
+[node name="Coin28" parent="Coins" instance=ExtResource( 2 )]
+position = Vector2( 3751.28, 1063.04 )
+collision_mask = 1
+
+[node name="Coin29" parent="Coins" instance=ExtResource( 2 )]
+position = Vector2( 3982.92, 1139.65 )
+collision_mask = 1
+
+[node name="Coin30" parent="Coins" instance=ExtResource( 2 )]
+position = Vector2( 4004.3, 1269.72 )
+collision_mask = 1
+
 [node name="Obstacles" type="Node2D" parent="."]
 
 [node name="Hazard" parent="Obstacles" instance=ExtResource( 17 )]
@@ -678,3 +728,5 @@ rotation = 0.348218
 [node name="Hazard5" parent="Obstacles" instance=ExtResource( 17 )]
 position = Vector2( 8814, 3071 )
 rotation = 0.348218
+
+[editable path="Player"]
