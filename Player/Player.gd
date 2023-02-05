@@ -104,7 +104,9 @@ func _on_Area2D_area_entered(area):
 func _on_AnimatedSprite_animation_finished():
 	if animation_sprite.animation == "Jump":
 		animation_sprite.play("Fall")
+		#reset speed
+		speed = 300
 
 func _on_IncreaseSpee_timeout():
-	speed += 2
-	pass
+	speed += 4
+
