@@ -17,7 +17,7 @@
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 12.0
-height = 44.0
+height = 24.0
 
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
@@ -53,7 +53,7 @@ scale = Vector2( 0.644737, 0.362854 )
 texture = ExtResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -1, -1 )
+position = Vector2( 0, 8 )
 shape = SubResource( 1 )
 
 [node name="JumpTime" type="Timer" parent="."]
@@ -61,7 +61,6 @@ wait_time = 0.05
 one_shot = true
 
 [node name="DetectionArea" type="Area2D" parent="."]
-visible = false
 collision_mask = 3
 monitorable = false
 
@@ -77,18 +76,19 @@ enabled = true
 cast_to = Vector2( 0, 5 )
 
 [node name="Ray01" type="RayCast2D" parent="GroundDetection"]
-position = Vector2( 6, 15.031 )
+position = Vector2( 8, 13.545 )
 rotation = -0.261799
 enabled = true
 cast_to = Vector2( 0, 5 )
 
 [node name="Ray02" type="RayCast2D" parent="GroundDetection"]
-position = Vector2( -6, 15.031 )
+position = Vector2( -8, 13.545 )
 rotation = 0.261799
 enabled = true
 cast_to = Vector2( 0, 5 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
+current = true
 zoom = Vector2( 0.5, 0.5 )
 limit_left = 0
 limit_top = 0
@@ -99,7 +99,6 @@ position = Vector2( -5, 12 )
 scale = Vector2( 0.2, 0.2 )
 frames = SubResource( 2 )
 animation = "Idle"
-frame = 1
 playing = true
 
 [node name="IncreaseSpee" type="Timer" parent="."]
@@ -118,12 +117,6 @@ stream = ExtResource( 11 )
 [node name="Hit" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 14 )
 volume_db = 13.0
-
-[node name="Camera2D2" type="Camera2D" parent="."]
-current = true
-limit_left = 0
-limit_top = 0
-limit_smoothed = true
 
 [connection signal="timeout" from="JumpTime" to="." method="_on_JumpTime_timeout"]
 [connection signal="area_entered" from="DetectionArea" to="." method="_on_Area2D_area_entered"]
