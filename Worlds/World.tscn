@@ -133,10 +133,22 @@ rotation = 0.478506
 scale = Vector2( 0.3, 0.646469 )
 texture = ExtResource( 14 )
 
+[node name="GianTtree5" type="Sprite" parent="GIANTree"]
+position = Vector2( 4206, 1110.75 )
+rotation = 0.478506
+scale = Vector2( 0.470062, 1.16739 )
+texture = ExtResource( 14 )
+
 [node name="GianTtree3" type="Sprite" parent="GIANTree"]
 position = Vector2( 1682.73, 631.763 )
 rotation = 0.598051
 scale = Vector2( 0.383214, 0.727689 )
+texture = ExtResource( 16 )
+
+[node name="GianTtree4" type="Sprite" parent="GIANTree"]
+position = Vector2( 2862.83, 730.753 )
+rotation = 0.331962
+scale = Vector2( 0.383214, 0.892379 )
 texture = ExtResource( 16 )
 
 [node name="FGtree" type="Node2D" parent="."]
@@ -269,6 +281,34 @@ rotation = 0.182038
 [node name="Vine24" parent="Vines" instance=ExtResource( 5 )]
 position = Vector2( 7965, 2943 )
 rotation = 0.338139
+
+[node name="Vine25" parent="Vines" instance=ExtResource( 5 )]
+position = Vector2( 8296, 3072 )
+rotation = 0.338139
+
+[node name="Vine26" parent="Vines" instance=ExtResource( 3 )]
+position = Vector2( 8671, 3204 )
+rotation = 0.303272
+
+[node name="Vine27" parent="Vines" instance=ExtResource( 4 )]
+position = Vector2( 9018, 3310 )
+rotation = 0.182038
+
+[node name="Vine28" parent="Vines" instance=ExtResource( 5 )]
+position = Vector2( 9311, 3402 )
+rotation = 0.338139
+
+[node name="Vine29" parent="Vines" instance=ExtResource( 5 )]
+position = Vector2( 9645, 3409 )
+rotation = -0.317221
+
+[node name="Vine30" parent="Vines" instance=ExtResource( 5 )]
+position = Vector2( 9990, 3303 )
+rotation = -0.317221
+
+[node name="Vine31" parent="Vines" instance=ExtResource( 5 )]
+position = Vector2( 10324, 3201 )
+rotation = -0.317221
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 53, 298 )
