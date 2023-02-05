@@ -630,11 +630,14 @@ rotation = 0.523598
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 53, 298 )
 
+<<<<<<< HEAD
 [node name="Sprite" parent="Player/ParallaxBackground/ParallaxLayer" index="0"]
 __meta__ = {
 "_edit_lock_": true
 }
 
+=======
+>>>>>>> 58e0204764720c7574193579ed1da0d309668bae
 [node name="UI" type="CanvasLayer" parent="."]
 
 [node name="CoinLabel" type="Label" parent="UI"]
@@ -838,5 +841,3 @@ rotation = 0.348218
 [node name="Hazard5" parent="Obstacles" instance=ExtResource( 17 )]
 position = Vector2( 8814, 3071 )
 rotation = 0.348218
-
-[editable path="Player"]

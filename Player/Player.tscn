@@ -100,6 +100,7 @@ position = Vector2( -5, 12 )
 scale = Vector2( 0.2, 0.2 )
 frames = SubResource( 2 )
 animation = "Idle"
+frame = 1
 playing = true
 
 [node name="IncreaseSpee" type="Timer" parent="."]
@@ -123,7 +124,12 @@ volume_db = 13.0
 stream = ExtResource( 15 )
 volume_db = 13.0
 
+[node name="FreeFaling" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+
 [connection signal="timeout" from="JumpTime" to="." method="_on_JumpTime_timeout"]
 [connection signal="area_entered" from="DetectionArea" to="." method="_on_Area2D_area_entered"]
 [connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]
 [connection signal="timeout" from="IncreaseSpee" to="." method="_on_IncreaseSpee_timeout"]
+[connection signal="timeout" from="FreeFaling" to="." method="_on_FreeFaling_timeout"]
