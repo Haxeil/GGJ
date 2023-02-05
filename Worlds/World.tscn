@@ -1,245 +1,277 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Coin.tscn" type="PackedScene" id=2]
-
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 165, 10 )
+[ext_resource path="res://WorldBuilder/Vine1.tscn" type="PackedScene" id=3]
+[ext_resource path="res://WorldBuilder/Vine2.tscn" type="PackedScene" id=4]
+[ext_resource path="res://WorldBuilder/Vine3.tscn" type="PackedScene" id=5]
+[ext_resource path="res://asset_BG/BGtree1.PNG" type="Texture" id=6]
+[ext_resource path="res://asset_BG/BGtree3.PNG" type="Texture" id=7]
+[ext_resource path="res://asset_BG/BGtree2.PNG" type="Texture" id=8]
+[ext_resource path="res://asset_BG/BGtree4.PNG" type="Texture" id=9]
+[ext_resource path="res://asset_BG/FGtree2.PNG" type="Texture" id=10]
+[ext_resource path="res://asset_BG/FGtree3.PNG" type="Texture" id=11]
+[ext_resource path="res://asset_BG/FGtree1.PNG" type="Texture" id=12]
+[ext_resource path="res://asset_BG/FGtree4.PNG" type="Texture" id=13]
+[ext_resource path="res://asset_BG/GIANTtree2.PNG" type="Texture" id=14]
+[ext_resource path="res://asset_BG/GIANTtree1.PNG" type="Texture" id=15]
+[ext_resource path="res://asset_BG/GIANTtree3.PNG" type="Texture" id=16]
 
 [node name="World" type="Node2D"]
 
+[node name="BGtree" type="Node2D" parent="."]
+z_index = -1
+
+[node name="BGtree1" type="Sprite" parent="BGtree"]
+position = Vector2( 266.021, 372.343 )
+rotation = 0.388059
+scale = Vector2( 0.6, 0.634455 )
+texture = ExtResource( 6 )
+
+[node name="BGtree2" type="Sprite" parent="BGtree"]
+position = Vector2( 828.812, 460.388 )
+rotation = 0.289338
+scale = Vector2( 0.6, 0.7 )
+texture = ExtResource( 8 )
+
+[node name="BGtree3" type="Sprite" parent="BGtree"]
+position = Vector2( 1322.81, 640.387 )
+rotation = 0.289338
+scale = Vector2( 0.6, 0.7 )
+texture = ExtResource( 7 )
+
+[node name="BGtree4" type="Sprite" parent="BGtree"]
+position = Vector2( 1800.81, 768.388 )
+rotation = 0.447393
+scale = Vector2( 0.6, 0.7 )
+texture = ExtResource( 9 )
+
+[node name="BGtree5" type="Sprite" parent="BGtree"]
+position = Vector2( 2204.02, 954.343 )
+rotation = 0.388059
+scale = Vector2( 0.6, 0.634455 )
+texture = ExtResource( 6 )
+
+[node name="BGtree6" type="Sprite" parent="BGtree"]
+position = Vector2( 2766.81, 1042.39 )
+rotation = 0.289338
+scale = Vector2( 0.6, 0.7 )
+texture = ExtResource( 8 )
+
+[node name="BGtree7" type="Sprite" parent="BGtree"]
+position = Vector2( 3260.81, 1222.39 )
+rotation = 0.289338
+scale = Vector2( 0.6, 0.7 )
+texture = ExtResource( 7 )
+
+[node name="BGtree8" type="Sprite" parent="BGtree"]
+position = Vector2( 3738.81, 1350.39 )
+rotation = 0.447393
+scale = Vector2( 0.6, 0.7 )
+texture = ExtResource( 9 )
+
+[node name="BGtree9" type="Sprite" parent="BGtree"]
+position = Vector2( 3982.02, 1664.34 )
+rotation = 0.388059
+scale = Vector2( 0.6, 0.634455 )
+texture = ExtResource( 6 )
+
+[node name="BGtree10" type="Sprite" parent="BGtree"]
+position = Vector2( 4544.81, 1752.39 )
+rotation = 0.289338
+scale = Vector2( 0.6, 0.7 )
+texture = ExtResource( 8 )
+
+[node name="BGtree11" type="Sprite" parent="BGtree"]
+position = Vector2( 5038.81, 1932.39 )
+rotation = 0.289338
+scale = Vector2( 0.6, 0.7 )
+texture = ExtResource( 7 )
+
+[node name="BGtree12" type="Sprite" parent="BGtree"]
+position = Vector2( 5516.81, 2060.39 )
+rotation = 0.447393
+scale = Vector2( 0.6, 0.7 )
+texture = ExtResource( 9 )
+
+[node name="BGtree13" type="Sprite" parent="BGtree"]
+position = Vector2( 6006.02, 2241.34 )
+rotation = 0.388059
+scale = Vector2( 0.6, 0.634455 )
+texture = ExtResource( 6 )
+
+[node name="BGtree14" type="Sprite" parent="BGtree"]
+position = Vector2( 6568.81, 2329.39 )
+rotation = 0.289338
+scale = Vector2( 0.6, 0.7 )
+texture = ExtResource( 8 )
+
+[node name="BGtree15" type="Sprite" parent="BGtree"]
+position = Vector2( 7062.81, 2509.39 )
+rotation = 0.289338
+scale = Vector2( 0.6, 0.7 )
+texture = ExtResource( 7 )
+
+[node name="BGtree16" type="Sprite" parent="BGtree"]
+position = Vector2( 7540.81, 2637.39 )
+rotation = 0.447393
+scale = Vector2( 0.6, 0.7 )
+texture = ExtResource( 9 )
+
+[node name="GIANTree" type="Node2D" parent="."]
+z_index = -2
+
+[node name="GianTtree1" type="Sprite" parent="GIANTree"]
+position = Vector2( 135.955, 364.586 )
+rotation = 0.391407
+scale = Vector2( 0.3, 0.484279 )
+texture = ExtResource( 15 )
+
+[node name="GianTtree2" type="Sprite" parent="GIANTree"]
+position = Vector2( 944.281, 533.316 )
+rotation = 0.478506
+scale = Vector2( 0.3, 0.646469 )
+texture = ExtResource( 14 )
+
+[node name="GianTtree3" type="Sprite" parent="GIANTree"]
+position = Vector2( 1682.73, 631.763 )
+rotation = 0.598051
+scale = Vector2( 0.383214, 0.727689 )
+texture = ExtResource( 16 )
+
+[node name="FGtree" type="Node2D" parent="."]
+z_index = 2
+
+[node name="FGtree1" type="Sprite" parent="FGtree"]
+position = Vector2( 335, 632 )
+rotation = 0.44721
+scale = Vector2( 0.6, 0.7 )
+texture = ExtResource( 12 )
+
+[node name="FGtree2" type="Sprite" parent="FGtree"]
+position = Vector2( 1011, 878 )
+rotation = 0.304937
+scale = Vector2( 0.6, 0.7 )
+texture = ExtResource( 10 )
+
+[node name="FGtree3" type="Sprite" parent="FGtree"]
+position = Vector2( 1937, 1146 )
+rotation = 0.204716
+scale = Vector2( 0.6, 0.7 )
+texture = ExtResource( 11 )
+
+[node name="FGtree4" type="Sprite" parent="FGtree"]
+position = Vector2( 2359, 1250 )
+rotation = 0.380541
+scale = Vector2( 0.6, 0.7 )
+texture = ExtResource( 13 )
+
+[node name="FGtree5" type="Sprite" parent="FGtree"]
+position = Vector2( 2966, 1441 )
+rotation = 0.44721
+scale = Vector2( 0.6, 0.7 )
+texture = ExtResource( 12 )
+
+[node name="Vines" type="Node2D" parent="."]
+
+[node name="Vine1" parent="Vines" instance=ExtResource( 3 )]
+position = Vector2( 216, 400 )
+rotation = 0.303272
+
+[node name="Vine2" parent="Vines" instance=ExtResource( 4 )]
+position = Vector2( 563, 506 )
+rotation = 0.182038
+
+[node name="Vine3" parent="Vines" instance=ExtResource( 5 )]
+position = Vector2( 856, 598 )
+rotation = 0.338139
+
+[node name="Vine4" parent="Vines" instance=ExtResource( 3 )]
+position = Vector2( 1231, 730 )
+rotation = 0.303272
+
+[node name="Vine5" parent="Vines" instance=ExtResource( 4 )]
+position = Vector2( 1578, 836 )
+rotation = 0.182038
+
+[node name="Vine6" parent="Vines" instance=ExtResource( 5 )]
+position = Vector2( 1871, 928 )
+rotation = 0.338139
+
+[node name="Vine7" parent="Vines" instance=ExtResource( 3 )]
+position = Vector2( 2253, 1074 )
+rotation = 0.303272
+
+[node name="Vine8" parent="Vines" instance=ExtResource( 4 )]
+position = Vector2( 2600, 1180 )
+rotation = 0.182038
+
+[node name="Vine9" parent="Vines" instance=ExtResource( 5 )]
+position = Vector2( 2893, 1272 )
+rotation = 0.338139
+
+[node name="Vine10" parent="Vines" instance=ExtResource( 3 )]
+position = Vector2( 3268, 1404 )
+rotation = 0.303272
+
+[node name="Vine11" parent="Vines" instance=ExtResource( 4 )]
+position = Vector2( 3615, 1510 )
+rotation = 0.182038
+
+[node name="Vine12" parent="Vines" instance=ExtResource( 5 )]
+position = Vector2( 3908, 1602 )
+rotation = 0.338139
+
+[node name="Vine13" parent="Vines" instance=ExtResource( 3 )]
+position = Vector2( 4282, 1746 )
+rotation = 0.303272
+
+[node name="Vine14" parent="Vines" instance=ExtResource( 4 )]
+position = Vector2( 4629, 1852 )
+rotation = 0.182038
+
+[node name="Vine15" parent="Vines" instance=ExtResource( 5 )]
+position = Vector2( 4922, 1944 )
+rotation = 0.338139
+
+[node name="Vine16" parent="Vines" instance=ExtResource( 3 )]
+position = Vector2( 5297, 2076 )
+rotation = 0.303272
+
+[node name="Vine17" parent="Vines" instance=ExtResource( 4 )]
+position = Vector2( 5644, 2182 )
+rotation = 0.182038
+
+[node name="Vine18" parent="Vines" instance=ExtResource( 5 )]
+position = Vector2( 5937, 2274 )
+rotation = 0.338139
+
+[node name="Vine19" parent="Vines" instance=ExtResource( 3 )]
+position = Vector2( 6310, 2415 )
+rotation = 0.303272
+
+[node name="Vine20" parent="Vines" instance=ExtResource( 4 )]
+position = Vector2( 6657, 2521 )
+rotation = 0.182038
+
+[node name="Vine21" parent="Vines" instance=ExtResource( 5 )]
+position = Vector2( 6950, 2613 )
+rotation = 0.338139
+
+[node name="Vine22" parent="Vines" instance=ExtResource( 3 )]
+position = Vector2( 7325, 2745 )
+rotation = 0.303272
+
+[node name="Vine23" parent="Vines" instance=ExtResource( 4 )]
+position = Vector2( 7672, 2851 )
+rotation = 0.182038
+
+[node name="Vine24" parent="Vines" instance=ExtResource( 5 )]
+position = Vector2( 7965, 2943 )
+rotation = 0.338139
+
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 27, 188 )
-
-[node name="Camera2D" type="Camera2D" parent="Player"]
-position = Vector2( -30, -18 )
-current = true
-
-[node name="Ground" type="Node2D" parent="."]
-
-[node name="KinematicBody2D" type="StaticBody2D" parent="."]
-position = Vector2( -2, 68 )
-rotation = 0.522388
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
-position = Vector2( 147, 118 )
-shape = SubResource( 1 )
-
-[node name="KinematicBody2D2" type="StaticBody2D" parent="."]
-position = Vector2( 251, 218 )
-rotation = 0.238215
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D2"]
-position = Vector2( 147, 118 )
-shape = SubResource( 1 )
-
-[node name="KinematicBody2D3" type="StaticBody2D" parent="."]
-position = Vector2( 591, 349 )
-rotation = 0.523454
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D3"]
-position = Vector2( 147, 118 )
-shape = SubResource( 1 )
-
-[node name="KinematicBody2D4" type="StaticBody2D" parent="."]
-position = Vector2( 871, 523 )
-rotation = 0.523454
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D4"]
-position = Vector2( 147, 118 )
-shape = SubResource( 1 )
-
-[node name="KinematicBody2D5" type="StaticBody2D" parent="."]
-position = Vector2( 1136, 718 )
-rotation = 0.523454
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D5"]
-position = Vector2( 147, 118 )
-shape = SubResource( 1 )
-
-[node name="KinematicBody2D6" type="StaticBody2D" parent="."]
-position = Vector2( 1308, 869 )
-rotation = -0.047561
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D6"]
-position = Vector2( 147, 118 )
-shape = SubResource( 1 )
-
-[node name="KinematicBody2D7" type="StaticBody2D" parent="."]
-position = Vector2( 1609, 852 )
-rotation = -0.213659
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D7"]
-position = Vector2( 147, 118 )
-shape = SubResource( 1 )
-
-[node name="KinematicBody2D8" type="StaticBody2D" parent="."]
-position = Vector2( 1883, 799 )
-rotation = -0.559946
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D8"]
-position = Vector2( 147, 118 )
-shape = SubResource( 1 )
-
-[node name="KinematicBody2D9" type="StaticBody2D" parent="."]
-position = Vector2( 2160, 627 )
-rotation = -0.559946
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D9"]
-position = Vector2( 147, 118 )
-shape = SubResource( 1 )
-
-[node name="KinematicBody2D10" type="StaticBody2D" parent="."]
-position = Vector2( 2436, 450 )
-rotation = -0.559946
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D10"]
-position = Vector2( 147, 118 )
-shape = SubResource( 1 )
-
-[node name="KinematicBody2D11" type="StaticBody2D" parent="."]
-position = Vector2( 2708, 275 )
-rotation = -0.559946
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D11"]
-position = Vector2( 147, 118 )
-shape = SubResource( 1 )
-
-[node name="KinematicBody2D12" type="StaticBody2D" parent="."]
-position = Vector2( 2980, 100 )
-rotation = -0.559946
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D12"]
-position = Vector2( 147, 118 )
-shape = SubResource( 1 )
-
-[node name="KinematicBody2D13" type="StaticBody2D" parent="."]
-position = Vector2( 3260, -75 )
-rotation = -0.559946
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D13"]
-position = Vector2( 147, 118 )
-shape = SubResource( 1 )
-
-[node name="KinematicBody2D14" type="StaticBody2D" parent="."]
-position = Vector2( 3591, -253 )
-rotation = -0.00781691
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D14"]
-position = Vector2( 147, 118 )
-shape = SubResource( 1 )
-
-[node name="KinematicBody2D15" type="StaticBody2D" parent="."]
-position = Vector2( 3971, -224 )
-rotation = 0.522388
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D15"]
-position = Vector2( 147, 118 )
-shape = SubResource( 1 )
-
-[node name="KinematicBody2D16" type="StaticBody2D" parent="."]
-position = Vector2( 4224, -73.9999 )
-rotation = 0.238215
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D16"]
-position = Vector2( 147, 118 )
-shape = SubResource( 1 )
-
-[node name="KinematicBody2D17" type="StaticBody2D" parent="."]
-position = Vector2( 4564, 57 )
-rotation = 0.523454
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D17"]
-position = Vector2( 147, 118 )
-shape = SubResource( 1 )
-
-[node name="KinematicBody2D18" type="StaticBody2D" parent="."]
-position = Vector2( 4844, 231 )
-rotation = 0.523454
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D18"]
-position = Vector2( 147, 118 )
-shape = SubResource( 1 )
-
-[node name="KinematicBody2D19" type="StaticBody2D" parent="."]
-position = Vector2( 5109, 426 )
-rotation = 0.523454
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D19"]
-position = Vector2( 147, 118 )
-shape = SubResource( 1 )
-
-[node name="KinematicBody2D20" type="StaticBody2D" parent="."]
-position = Vector2( 5281, 577 )
-rotation = -0.047561
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D20"]
-position = Vector2( 147, 118 )
-shape = SubResource( 1 )
-
-[node name="KinematicBody2D21" type="StaticBody2D" parent="."]
-position = Vector2( 5582, 560 )
-rotation = -0.213659
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D21"]
-position = Vector2( 147, 118 )
-shape = SubResource( 1 )
-
-[node name="KinematicBody2D22" type="StaticBody2D" parent="."]
-position = Vector2( 5856, 507 )
-rotation = -0.559946
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D22"]
-position = Vector2( 147, 118 )
-shape = SubResource( 1 )
-
-[node name="KinematicBody2D23" type="StaticBody2D" parent="."]
-position = Vector2( 6133, 335 )
-rotation = -0.559946
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D23"]
-position = Vector2( 147, 118 )
-shape = SubResource( 1 )
-
-[node name="KinematicBody2D24" type="StaticBody2D" parent="."]
-position = Vector2( 6409, 158 )
-rotation = -0.559946
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D24"]
-position = Vector2( 147, 118 )
-shape = SubResource( 1 )
-
-[node name="KinematicBody2D25" type="StaticBody2D" parent="."]
-position = Vector2( 6681, -16.9999 )
-rotation = -0.559946
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D25"]
-position = Vector2( 147, 118 )
-shape = SubResource( 1 )
-
-[node name="KinematicBody2D26" type="StaticBody2D" parent="."]
-position = Vector2( 6953, -192 )
-rotation = -0.559946
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D26"]
-position = Vector2( 147, 118 )
-shape = SubResource( 1 )
-
-[node name="KinematicBody2D27" type="StaticBody2D" parent="."]
-position = Vector2( 7233, -367 )
-rotation = -0.559946
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D27"]
-position = Vector2( 147, 118 )
-shape = SubResource( 1 )
-
-[node name="KinematicBody2D28" type="StaticBody2D" parent="."]
-position = Vector2( 7564, -545 )
-rotation = -0.00781691
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D28"]
-position = Vector2( 147, 118 )
-shape = SubResource( 1 )
+position = Vector2( 53, 298 )
 
 [node name="UI" type="CanvasLayer" parent="."]
 

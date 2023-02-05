@@ -14,6 +14,11 @@ var gravity_vector = Vector2.DOWN
 
 var rotation_adjustment_speed = PI / 6 # 1/12 rotation 
 
+func _ready():
+	for child in $GroundDetection.get_children():
+		var ray: RayCast2D = child
+		ray.add_exception(self)
+
 func _physics_process(dt):
 	apply_gravity(dt);
 	jump()
