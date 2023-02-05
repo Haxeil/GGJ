@@ -42,10 +42,9 @@ func apply_gravity(dt):
 		if velocity.length() != 0 and velocity.length() > gravity_vector.length() and velocity.length() > -jump_vector.length() / gravity_vector.length():
 			if animation_sprite.animation == "Jump" and animation_sprite.playing == true: return
 			animation_sprite.play("Fall")
-			$FreeFaling.start()
 			$Slide.stop()
 		
-		
+		$FreeFaling.start()
 		adjust_rotation_when_flying(dt)
 
 func move():
