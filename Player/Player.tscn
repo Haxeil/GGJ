@@ -12,8 +12,6 @@
 [ext_resource path="res://char_anim/char_0000.png" type="Texture" id=10]
 
 [sub_resource type="CapsuleShape2D" id=1]
-<<<<<<< HEAD
-=======
 radius = 12.0
 height = 44.0
 
@@ -34,7 +32,6 @@ animations = [ {
 "name": "Jump",
 "speed": 5.0
 } ]
->>>>>>> b0e16f4523b31ed600db055b68ac0fb2ddd27ac2
 
 [node name="Player" type="KinematicBody2D"]
 script = ExtResource( 1 )
