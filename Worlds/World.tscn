@@ -29,33 +29,33 @@ scale = Vector2( 0.6, 0.634455 )
 texture = ExtResource( 6 )
 
 [node name="BGtree2" type="Sprite" parent="BGtree"]
-position = Vector2( 828.812, 460.388 )
+position = Vector2( 769.137, 525.864 )
 rotation = 0.289338
-scale = Vector2( 0.6, 0.7 )
+scale = Vector2( 0.788788, 0.998249 )
 texture = ExtResource( 8 )
 
 [node name="BGtree3" type="Sprite" parent="BGtree"]
-position = Vector2( 1322.81, 640.387 )
+position = Vector2( 1345.08, 763.983 )
 rotation = 0.289338
-scale = Vector2( 0.6, 0.7 )
+scale = Vector2( 0.856714, 1.13284 )
 texture = ExtResource( 7 )
 
 [node name="BGtree4" type="Sprite" parent="BGtree"]
-position = Vector2( 1800.81, 768.388 )
+position = Vector2( 1806.15, 882.996 )
 rotation = 0.447393
-scale = Vector2( 0.6, 0.7 )
+scale = Vector2( 0.830482, 1.09693 )
 texture = ExtResource( 9 )
 
 [node name="BGtree5" type="Sprite" parent="BGtree"]
-position = Vector2( 2204.02, 954.343 )
+position = Vector2( 2225.73, 1097.81 )
 rotation = 0.388059
-scale = Vector2( 0.6, 0.634455 )
+scale = Vector2( 0.958471, 1.1348 )
 texture = ExtResource( 6 )
 
 [node name="BGtree6" type="Sprite" parent="BGtree"]
-position = Vector2( 2766.81, 1042.39 )
+position = Vector2( 2795.91, 1165.84 )
 rotation = 0.289338
-scale = Vector2( 0.6, 0.7 )
+scale = Vector2( 0.909365, 1.11129 )
 texture = ExtResource( 8 )
 
 [node name="BGtree7" type="Sprite" parent="BGtree"]
