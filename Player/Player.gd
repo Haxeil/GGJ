@@ -6,13 +6,14 @@ var speed = 300
 var velocity = Vector2.ZERO
 onready var ground_ray = $GroundDetection/Ray00
 onready var ray_vector = ground_ray.cast_to
-export var jump_power = 300
-var was_on_ground = false
+var jump_power = speed * 1.2
+var was_on_ground: bool = false
 var on_ground = false
 var jump_vector = Vector2.UP
 var gravity_vector = Vector2.DOWN
+onready var animation_sprite: AnimatedSprite = $AnimatedSprite
 
-var rotation_adjustment_speed = PI / 6 # 1/12 rotation 
+var rotation_adjustment_speed = PI / 12 # 1/12 rotation 
 
 func _ready():
 	for child in $GroundDetection.get_children():
@@ -30,10 +31,17 @@ func _process(delta):
 
 func apply_gravity(dt):
 	if on_ground:
+		animation_sprite.play("Idle")
 		if rotation == 0:
 			velocity.y = 0
 	else:
 		velocity -= gravity * gravity_vector;
+		if velocity.length() != 0 and velocity.length() > gravity_vector.length() and velocity.length() > -jump_vector.length() / gravity_vector.length():
+			if animation_sprite.animation == "Jump" and animation_sprite.playing == true: return
+			animation_sprite.play("Fall")
+		
+		
+		
 		adjust_rotation_when_flying(dt)
 
 func move():
@@ -59,6 +67,7 @@ func adjust_movement():
 
 func jump():
 	if Input.is_action_just_pressed("jump") and on_ground: 
+		animation_sprite.play("Jump")
 		for ray in $GroundDetection.get_children():
 			ray.enabled = false
 		$JumpTime.start()
@@ -90,3 +99,12 @@ func _on_Area2D_area_entered(area):
 	if area.is_in_group("Coin"):
 		area.queue_free()
 		$"../UI/CoinCount".text = str(int($"../UI/CoinCount".text)+1)
+		
+
+func _on_AnimatedSprite_animation_finished():
+	if animation_sprite.animation == "Jump":
+		animation_sprite.play("Fall")
+
+func _on_IncreaseSpee_timeout():
+	speed += 2
+	pass
