@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://Player/Player.gd" type="Script" id=1]
 [ext_resource path="res://char_anim/char_0007.png" type="Texture" id=2]
@@ -14,13 +14,14 @@
 [ext_resource path="res://SFX/Jump1.ogg" type="AudioStream" id=12]
 [ext_resource path="res://SFX/Jump.ogg" type="AudioStream" id=13]
 [ext_resource path="res://SFX/Hit.ogg" type="AudioStream" id=14]
-[ext_resource path="res://coinfx/grabcoin_0003.png" type="Texture" id=15]
+[ext_resource path="res://SFX/Hit1.ogg" type="AudioStream" id=15]
 [ext_resource path="res://coinfx/grabcoin_0004.png" type="Texture" id=16]
 [ext_resource path="res://coinfx/grabcoin_0005.png" type="Texture" id=17]
 [ext_resource path="res://coinfx/grabcoin_0002.png" type="Texture" id=18]
 [ext_resource path="res://coinfx/grabcoin_0006.png" type="Texture" id=19]
 [ext_resource path="res://coinfx/grabcoin_0000.png" type="Texture" id=20]
 [ext_resource path="res://coinfx/grabcoin_0001.png" type="Texture" id=21]
+[ext_resource path="res://coinfx/grabcoin_0003.png" type="Texture" id=22]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 12.0
@@ -46,7 +47,7 @@ animations = [ {
 
 [sub_resource type="SpriteFrames" id=3]
 animations = [ {
-"frames": [ ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 18 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 19 ) ],
+"frames": [ ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 18 ), ExtResource( 22 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 19 ) ],
 "loop": false,
 "name": "default",
 "speed": 5.0
@@ -136,6 +137,10 @@ stream = ExtResource( 11 )
 
 [node name="Hit" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 14 )
+volume_db = 13.0
+
+[node name="Hit1" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 15 )
 volume_db = 13.0
 
 [node name="CoinAnim" type="AnimatedSprite" parent="."]

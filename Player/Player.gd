@@ -122,3 +122,11 @@ func _on_AnimatedSprite_animation_finished():
 func _on_IncreaseSpee_timeout():
 	speed += 4
 	jump_power = speed
+	
+
+func die():
+	set_process(false)
+	set_physics_process(false)
+	$Hit1.play()
+	yield($Hit1, "finished")
+	get_tree().change_scene("res://Worlds/World.tscn")
