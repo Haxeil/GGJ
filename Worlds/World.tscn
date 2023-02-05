@@ -388,28 +388,23 @@ position = Vector2( 497.506, 384.796 )
 scale = Vector2( 0.352285, 0.65624 )
 
 [node name="Vine39" parent="Vines" instance=ExtResource( 3 )]
-position = Vector2( 974.275, 492.569 )
+position = Vector2( 1007.12, 480.915 )
 rotation = -0.261799
-scale = Vector2( 0.387852, 1 )
+scale = Vector2( 0.521692, 1 )
 
 [node name="Vine44" parent="Vines" instance=ExtResource( 5 )]
-position = Vector2( 1177.8, 516.692 )
+position = Vector2( 1249.84, 497.622 )
 rotation = 0.338139
 scale = Vector2( 0.722588, 1 )
 
 [node name="Vine45" parent="Vines" instance=ExtResource( 3 )]
-position = Vector2( 1356.69, 606.561 )
-rotation = 0.523598
+position = Vector2( 1414.96, 599.145 )
+rotation = 0.785397
 scale = Vector2( 0.317532, 0.663926 )
 
 [node name="Vine50" parent="Vines" instance=ExtResource( 3 )]
-position = Vector2( 1440.82, 671.644 )
-rotation = 0.785397
-scale = Vector2( 0.156671, 0.355957 )
-
-[node name="Vine55" parent="Vines" instance=ExtResource( 3 )]
-position = Vector2( 1086.87, 449.834 )
-rotation = -1.309
+position = Vector2( 1479.82, 683.644 )
+rotation = 1.0472
 scale = Vector2( 0.156671, 0.355957 )
 
 [node name="Vine56" parent="Vines" instance=ExtResource( 3 )]
@@ -702,7 +697,7 @@ collision_mask = 1
 [node name="Obstacles" type="Node2D" parent="."]
 
 [node name="Hazard" parent="Obstacles" instance=ExtResource( 17 )]
-position = Vector2( 1236, 441 )
+position = Vector2( 1155.48, 711.163 )
 rotation = 0.348218
 
 [node name="Hazard2" parent="Obstacles" instance=ExtResource( 17 )]
